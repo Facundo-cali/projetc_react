@@ -7,6 +7,7 @@ export class Task {
     description = '';
     completed = false;
     level = LEVELS.NORMAL;
+    
 
 
     constructor(name, description, completed, level){  // creo tareas 

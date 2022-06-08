@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const GreetingF = (props) => {
 
     //Breve introduccion a useState(es una funcion que nos permite crear un stado privado para este componente de tipo funcion)
-    //la estructura de useState es const [variable, motodo para actualizarlo] = useState(valor inicial);
+    //la estructura de useState es const [variable, metodo para actualizarlo] = useState(valor inicial);
     const [age, setage] = useState(29);
 
     const birthday = () => {
