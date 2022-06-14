@@ -11,6 +11,7 @@ const Ejemplo2 = () => {
 
     //Vamos a crear dos contadores distintos
     //cada uno en un estado diferente
+    //la estructura es:  const [nombreVariable, funcionParaCambiar] = useState(valorInicial)
 
     const [contador1, setContador1] = useState(0);
     const [contador2, setContador2] = useState(0);

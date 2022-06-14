@@ -1,11 +1,21 @@
 //task seria cada tarea individual
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
 
 const TaskComponent = ({ task }) => { //le paso la tarea
+
+
+    //usamos un useEffect para controlar cuando una tarea desparece cuando la tengamos que borrar, modificar etc
+    useEffect(() => {
+        console.log('Created Task')
+        return () => {
+            console.log(`Task ${task.name} is going to unmount`)
+        };
+    }, [task]);//cada modificacion que haya en el task se generara este useEffect
+
     return (
         <div>
             <h2>

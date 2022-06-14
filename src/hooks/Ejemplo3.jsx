@@ -5,10 +5,11 @@
  */
 
 import React, { useState, useContext } from 'react';
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Inicializamos un estado vacio que va a rellenarse con
 //los datos del padre
 const miContexto = React.createContext(null) 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @returns Componente 1
  * Dispone de un contexto que va a tener un valor
@@ -16,7 +17,7 @@ const miContexto = React.createContext(null)
 */
 const Componente1 = () => {
 
-    const state = useContext(miContexto);
+    const state = useContext(miContexto);//miContexto seria sessionData que ya se lo pase abajo
 
     return (
         <div>
@@ -29,7 +30,7 @@ const Componente1 = () => {
     );
 }
 const Componente2 = () => {
-    const state = useContext(miContexto);
+    const state = useContext(miContexto);//miContexto seria sessionData que ya se lo pase abajo
     return (
         <div>
             <h2>
@@ -39,7 +40,7 @@ const Componente2 = () => {
     );
 }
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export default function MiComponenteConContexto() {
 
     const estadoInicial = {
@@ -61,7 +62,7 @@ export default function MiComponenteConContexto() {
     }
 
     return (
-        <miContexto.Provider value={sessionData}>
+        <miContexto.Provider value={sessionData}> {/**le estoy pasando session data a los componentes anteriores*/}
             {/*Todo lo que esta aca adentro puede leer los datos de sessionData */}
             {/*Ademas si se actualiza,tambien cambian acá */}
             <h1>***Ejemplo de useState() y useContext()***</h1>
